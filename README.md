@@ -21,4 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
+*To publish a new article
+* User: admin
+* Pass: admin
 * ...
