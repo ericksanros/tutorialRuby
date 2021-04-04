@@ -1,9 +1,11 @@
 class ArticlesController < ApplicationController
 
 
-  http_basic_authenticate_with name: "admin", password: "admin", except: [:index, :show]
+ # http_basic_authenticate_with name: "admin", password: "admin", except: [:index, :show]
+ #Quitamos contrasena y login para hacer mas funcional
   def index
     @articles = Article.all
+    
   end
 
   def show
@@ -19,6 +21,7 @@ class ArticlesController < ApplicationController
 
     if @article.save
       redirect_to @article
+      #Se redirecciona al articulo creado recientemente
     else
       render :new
     end

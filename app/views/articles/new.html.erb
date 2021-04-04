@@ -18,6 +18,16 @@
     <% end %>
   </div>
 
+  <!--Agregamos otra seccion para que incluya status del articulo -->
+  <div>
+    <%= form.label :status %><br>
+    <%= form.select :status, ["public", "private", "archived"]%><br>
+    <!--La linea anterior nos dara opcion de elegir entre 3 opciones al momento de crear el articulo, asignandole el status al articulo -->
+    <% @article.errors.full_messages_for(:status).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>
